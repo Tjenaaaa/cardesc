@@ -1,4 +1,4 @@
-#  cardosc
+#  cardesc
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
     cd cardesc
