@@ -35,8 +35,8 @@ print("""\n __        __   __   ___  __   __
                 v.3.0
            :: t.me/oldnum ::
   btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
-   eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-    payeer: P1061248421\n""")
+  eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+  payeer: P1061248421\n""")
 print("""
 [0] История BANK
 [1] CARD PAY
