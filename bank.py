@@ -53,8 +53,8 @@ if used == "0":
                 v.3.0
            :: t.me/oldnum ::
   btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
-   eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-    payeer: P1061248421\n""")
+  eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+  payeer: P1061248421\n""")
         x = open('result.log', 'r')
         print(x.read())
         exit()
@@ -69,8 +69,8 @@ elif used == '2':
                 v.3.0         
            ::t.me/oldnum::
   btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
-   eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-    payeer: P1061248421\n""")
+  eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+  payeer: P1061248421\n""")
     print("""#  cardesc  v.3.0
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
