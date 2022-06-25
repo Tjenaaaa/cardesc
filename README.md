@@ -1,8 +1,10 @@
-#  cardesc
+#  cardesc v.3.0
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
     cd cardesc
     pip3 install -r requirements.txt
+
+#  launch
     python3 bank.py
 
 #  Ukraine
@@ -18,4 +20,6 @@ Everything written here is written solely for educational and research purposes,
 Keep in mind, the FBI is watching you :|
 
 #  Donate:
-Payeer: P1061248421
+btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS
+eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+payeer: P1061248421

