@@ -100,7 +100,7 @@ else:
     if used ==  "1":
         with open("dist/location.location", 'w') as loca:
             loca.write("https://google.com")
-if (ports == "" or ports != int):
+if (ports == ""):
     ports=8080
 if __name__ == '__main__':
     a = A()
