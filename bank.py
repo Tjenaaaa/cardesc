@@ -86,8 +86,10 @@ else:
     os.system("clear || cls")
     print(logo)
     exit()
-
-ports = input("Порт: ")
+try:
+    ports = int(input("Порт: "))
+except:
+    ports=8080
 reloc = input("Редирект or (enter): ")
 
 if reloc != "":
