@@ -1,4 +1,4 @@
-#  cardesc v.3.0
+#  cardesc v.3.2
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
     cd cardesc

