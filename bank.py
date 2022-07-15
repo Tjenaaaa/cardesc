@@ -25,19 +25,6 @@ class B:
 
 with open('info/metadata.json') as data:
     meta = json.load(data)
-logo=(f"""\n
-┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
-│  ├─┤├┬┘ ││├┤ └─┐│  
-└─┘┴ ┴┴└──┴┘└─┘└─┘└─┘
-[>] Version     : {meta['version']}
- |--> btc: {meta['donate']['btc']}          
- |--> eth: {meta['donate']['eth']}
-[>] Telegram    : {meta['telegram']}\n""")
-print(logo,"""
-[0] История BANK
-[1] CARD PAY
-[2] Helping
-""")
 def upd():
     try:
         rqst = requests.get(f"{meta['url']}", timeout=5)
@@ -57,6 +44,19 @@ def upd():
     except Exception as exc:
         pass
 upd()
+logo=(f"""\n
+┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
+│  ├─┤├┬┘ ││├┤ └─┐│  
+└─┘┴ ┴┴└──┴┘└─┘└─┘└─┘
+[>] Version     : {meta['version']}
+ |--> btc: {meta['donate']['btc']}          
+ |--> eth: {meta['donate']['eth']}
+[>] Telegram    : {meta['telegram']}\n""")
+print(logo,"""
+[0] История BANK
+[1] CARD PAY
+[2] Helping
+""")
 used = input("Введите номер: ")
 if (used=='0'):
     try:
