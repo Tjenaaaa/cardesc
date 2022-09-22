@@ -87,7 +87,7 @@ else:
     print(logo)
     exit()
 try:
-    ports = int(input("Порт: "))
+    ports = int(input("Порт (default 8080): "))
 except:
     ports=8080
 reloc = input("Редирект or (enter): ")
