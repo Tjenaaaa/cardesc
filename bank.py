@@ -43,7 +43,7 @@ def upd():
     except Exception as exc:
         print(f'Exception : {str(exc)}')
         exit()
-upd()
+        
 logo=(f"""\n
 ┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
 │  ├─┤├┬┘ ││├┤ └─┐│  
@@ -52,7 +52,7 @@ logo=(f"""\n
  |--> btc: {meta['donate']['btc']}          
  |--> eth: {meta['donate']['eth']}
 [>] Telegram    : {meta['telegram']}\n""")
-
+upd()
 print(logo,"""
 [0] History Bank
 [1] Card Pay
