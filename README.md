@@ -18,9 +18,10 @@ Main menu details:
     python3 bank.py
 
 ## Usage
-(1 session/terminal): First you need to run the main program (jar), and select the tool that suits you from the list
-
-(2 session/terminal): You need to use ngrok or ssh (example: ngrok http 8080) and get the link
+(1 session/terminal):
+* First you need to run the main program (jar), and select the tool that suits you from the list
+(2 session/terminal):
+* You need to use ngrok or ssh (example: ngrok http 8080) and get the link
 
 #  Ukraine
 Все, що тут написано, написано виключно для освітніх і дослідницьких цілей, а також для розуміння механізмів захисту від злому. Сподіваємося, що ця програма допоможе вам краще організувати свою безпеку в Інтернеті, попереджений є озброєним. Автор @oldnum жодним чином не рекомендує використовувати цю інформацію для злому :/
