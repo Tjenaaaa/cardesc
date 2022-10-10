@@ -19,7 +19,7 @@ Main menu details:
 
 ## Usage
 (1 session/terminal):
-* First you need to run the main program (jar), and select the tool that suits you from the list
+* First you need to run the main program (example: python3 bank.py), and select the tool that suits you from the list
 
 (2 session/terminal):
 * You need to use ngrok or ssh (example: ngrok http 8080) and get the link
