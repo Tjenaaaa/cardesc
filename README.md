@@ -13,8 +13,6 @@ Main menu details:
     git clone https://github.com/oldnum/cardesc
     cd cardesc
     pip3 install -r requirements.txt
-
-#  launch
     python3 bank.py
 
 ## Usage
