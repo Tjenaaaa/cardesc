@@ -10,7 +10,7 @@ Main menu details:
 *  1 -> redirect - link/site to which the user will be redirected after entering data
 * [2] Helping - pro help to use 
 
-#  cardesc v.3.5
+#  cardesc v.3.4
     apt update && apt upgrade
     git clone https://github.com/oldnum/cardesc
     cd cardesc
