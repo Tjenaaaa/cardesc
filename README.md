@@ -1,5 +1,6 @@
 ## About
 Cardesc - universal phishing of bank cards to obtain personal/private data
+
 ![logo](https://i.imgur.com/sjPKwQc.png)
 
 Main menu details:
@@ -29,9 +30,9 @@ Main menu details:
 Everything written here is written solely for educational and research purposes, as well as to understand the mechanisms of protection against hacking. We hope that this program will help you to better organize your security on the Internet, forewarned is forearmed. The author of @oldnum does not in any way recommend using this information for hacking :/
 Keep in mind, the FBI is watching you :|
 
-#  Donate:
-btc:    3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS
+#  Donation:
+ * btc: 3LXDKcrjVXxpGhWXEnVMnndJP45nos2LBS
 
-eth:    0x7b6788a41F5379f49633a368FA902d47D318E4eC
+ * eth: 0x7b6788a41F5379f49633a368FA902d47D318E4eC
 
-payeer: P1061248421
+ * payeer: P1061248421
