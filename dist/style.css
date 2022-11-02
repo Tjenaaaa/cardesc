@@ -4,7 +4,7 @@ font-family: 'Shadows Into Light', cursive;*/
 body {
   margin: 0;
   background-color: transparent;
-  padding-top: 6em;
+  padding-top: 7em;
   color: #fff;
   font-family: "Roboto", sans-serif;
 }
@@ -65,11 +65,11 @@ form h3 {
 button {
   background: var(--shared-background);
   border: 3px solid #fff;
-  border-radius: 0.2em;
+  border-radius: 0.5em;
   padding: 5px 15px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: 20px;
   cursor: pointer;
 }
 button:not([disabled="disabled"]):hover {
@@ -98,7 +98,7 @@ select[name="month"] {
   max-width: 75px;
 }
 select[name="year"] {
-  max-width: 110px;
+  max-width: 107px;
 }
 .flexrow {
   width: 100%;

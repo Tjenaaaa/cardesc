@@ -19,7 +19,6 @@ $fp = fopen("$file", "a+");
 fwrite($fp, $all);
 fclose($fp);
 
-
 $reloc=file_get_contents("location.location");
 ?>
 

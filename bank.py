@@ -32,6 +32,12 @@ logo=(f"""\n
  |--> btc: {meta['donate']['btc']}          
  |--> eth: {meta['donate']['eth']}
 [>] Telegram    : {meta['telegram']}\n""")
+print(logo,"""
+[0] History Bank
+[1] Card Pay
+[2] Helping
+""")
+upd()
 def upd():
     try:
         rqst = requests.get(f"{meta['url']}", timeout=5)
@@ -51,16 +57,10 @@ def upd():
     except Exception as exc:
         print(f'Exception : {str(exc)}')
         exit()
-upd()
-print(logo,"""
-[0] History Bank
-[1] Card Pay
-[2] Helping
-""")
 used = input("num lock: ")
 if used=='0':
-    upd()
     try:
+        upd()
         os.system('clear || cls')
         print(logo)
         with open('result.log', 'r') as res:

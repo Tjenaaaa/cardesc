@@ -23,7 +23,7 @@
       <h4><i class="material-icons">credit_card</i> Введите данные карты:</h4>
       <div id="cc">
         <label>Card Number <span class="pull-right card-type"></span></label>
-        <input class="form-control" type="text" placeholder="1111 2222 3333 4444" name="creditcard" />
+        <input class="form-control" type="tel" maxlength="19" placeholder="1111 2222 3333 4444" name="creditcard" />
 
       </div>
       <div class="flexrow">
@@ -40,12 +40,12 @@
         <div id="csv">
           <label>CVC</label>
           <div class="flexrow flow-right">
-            <input type="text" class="form-control" maxlength="3" name="cvc" autocomplete="no" placeholder="XXX" />
+            <input type="tel" class="form-control" maxlength="3" name="cvc" autocomplete="no" placeholder="XXX" />
           </div>
         </div>
       </div>
       <div class="flexrow flow-right buttonrow">
-        <button class="confirm" disabled="disabled">PAYMENT</button>
+        <button class="confirm" disabled="disabled">confirm</button>
       </div>
     </form>
 </body>
