@@ -37,7 +37,7 @@ print(logo,"""
 [1] Card Pay
 [2] Helping
 """)
-upd()
+
 def upd():
     try:
         rqst = requests.get(f"{meta['url']}", timeout=5)
