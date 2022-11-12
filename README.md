@@ -15,6 +15,7 @@ Main menu details:
     git clone https://github.com/oldnum/cardesc
     cd cardesc
     pip3 install -r requirements.txt
+    python3 bank.py
 
 # Usage:
 (1 session/terminal):
@@ -25,12 +26,6 @@ Main menu details:
 
 * You need to use ngrok or ssh (example:ngrok http 8080) and get a link
     
-#  launch
-    python3 bank.py
-
-# ngrok
-    ngrok http 8080
-
 #  Ukraine
 Все, що тут написано, написано виключно для освітніх і дослідницьких цілей, а також для розуміння механізмів захисту від злому. Сподіваємося, що ця програма допоможе вам краще організувати свою безпеку в Інтернеті, попереджений є озброєним. Автор @oldnum жодним чином не рекомендує використовувати цю інформацію для злому :/
 Майте на увазі, ФБР стежить за вами :|
