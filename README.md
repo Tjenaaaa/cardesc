@@ -16,6 +16,15 @@ Main menu details:
     cd cardesc
     pip3 install -r requirements.txt
 
+# Usage:
+(1 session/terminal):
+
+* First you need to run the main program (example:python3 bank.py), and choose from the list the tool that suits you
+
+(2 sessions/terminal):
+
+* You need to use ngrok or ssh (example:ngrok http 8080) and get a link
+    
 #  launch
     python3 bank.py
 
