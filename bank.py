@@ -69,7 +69,7 @@ if used=='0':
         print(logo)
         with open('result.log', 'r') as res:
             print(res.read())
-        print("# ",dot_info)
+        print(dot_info)
     except:
         print(f'\n[>]New Update Available : {gh_version}')
         print(' |--> Please install     : https://github.com/oldnum/cardesc')
@@ -102,7 +102,7 @@ elif used == '2':
     os.system('clear || cls')
     print(logo)
     print(info_help)
-    print(f"""# launch\n  python3 bank.py\n\n# Helping:\n[>] Telegram    : {meta['telegram']}\n """,dot_info)
+    print(f"""# launch\n  python3 bank.py\n\n# Helping:\n[>] Telegram    : {meta['telegram']}\n\n""",dot_info)
 
     exit()
 else:
