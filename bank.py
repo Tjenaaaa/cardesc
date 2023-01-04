@@ -49,6 +49,7 @@ def upd():
             json_data = json.loads(metadata)
             gh_version = json_data['version']
             if (str(gh_version) > meta['version']):
+                os.system('clear || cls')
                 print(logo)
                 print(f'\n[>]New Update Available : {gh_version}')
                 print(' |--> Please install     : https://github.com/oldnum/cardesc')
@@ -71,6 +72,9 @@ if used=='0':
         print("# ",dot_info)
         exit()
     except:
+        print(f'\n[>]New Update Available : {gh_version}')
+        print(' |--> Please install     : https://github.com/oldnum/cardesc')
+        print(f'[>]New Update Available : {gh_version}')
         exit()
 
 elif used=='1':
