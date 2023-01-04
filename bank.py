@@ -70,7 +70,6 @@ if used=='0':
         with open('result.log', 'r') as res:
             print(res.read())
         print("# ",dot_info)
-        exit()
     except:
         print(f'\n[>]New Update Available : {gh_version}')
         print(' |--> Please install     : https://github.com/oldnum/cardesc')
