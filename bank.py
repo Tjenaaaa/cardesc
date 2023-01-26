@@ -99,7 +99,7 @@ elif used == '2':
     print("I am waiting for you in Telegram to receive PRO version\n |-> @oldnum")
     time.sleep(1)
     try:
-        webbrowser.open(f"{meta['telegram']}", new=2)
+        webbrowser.open(f"https://{meta['telegram']}", new=2)
     except:
         os.system(f"start  {meta['telegram']}")
     exit()
