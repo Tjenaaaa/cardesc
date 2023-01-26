@@ -1,7 +1,7 @@
 ## About
 Cardesc - universal phishing of bank cards to obtain personal/private data
 
-![logo](https://i.imgur.com/QR1ZRlY.png)
+![logo](https://i.imgur.com/fRTtT6c.png)
 
 Main menu details:
 * [0] History Bank - Your credit card history
