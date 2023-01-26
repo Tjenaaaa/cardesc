@@ -1,9 +1,9 @@
-import os, sys, time
+import os, time
 from multiprocessing import Process
 from prettytable import PrettyTable
-from info.data import *
 import json
 import requests
+import webbrowser
 
 os.system('clear || cls')
 with open("dist/log.log", "w") as dist:
@@ -31,14 +31,16 @@ logo=(f"""\n
 ┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
 │  ├─┤├┬┘ ││├┤ └─┐│  
 └─┘┴ ┴┴└──┴┘└─┘└─┘└─┘
-[>] Version     : {meta['version']}
+[>] Version     : {meta['version']} 
  |--> btc: {meta['donate']['btc']}          
  |--> eth: {meta['donate']['eth']}
-[>] Telegram    : {meta['telegram']}\n""")
+[>] Telegram    : {meta['telegram']}
+ |--> status: {meta['status']}
+ # buy PRO or VIP in telegram :>\n""")
 print(logo,"""
 [0] History Bank
 [1] Card Pay
-[2] Helping
+[2] Buy PRO/VIP version
 """)
 def upd():
     try:
@@ -81,12 +83,6 @@ elif used=='1':
         ports = int(input("ports: "))
     except:
         ports=8080
-    reloc = input("redirect or (enter): ")
-    if (reloc == ""):
-        pass
-    else:
-        with open("dist/location.location", 'w') as loca:
-            loca.write(reloc)
     a = A()
     b = B()
 
@@ -101,9 +97,12 @@ elif used == '2':
     upd()
     os.system('clear || cls')
     print(logo)
-    print(info_help)
-    print(f"""# launch\n  python3 bank.py\n\n# Helping:\n[>] Telegram    : {meta['telegram']}\n\n""",dot_info)
-
+    print("I am waiting for you in Telegram to receive PRO version\n |-> @oldnum")
+    time.sleep(1)
+    try:
+        webbrowser.open(f"{meta['telegram']}", new=2)
+    except:
+        os.system(f"start  {meta['telegram']}")
     exit()
 else:
     os.system("clear || cls")
