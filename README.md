@@ -8,21 +8,21 @@ Main menu details:
 * [1] Card Pay - Phishing a bank card for security purposes
 *  [1] -> [ports] - Port on which the program will run
 *  [1] -> [redirect] - sink/site to which the user will be redirected after entering data
-* [2] Buy PRO/VIP version - I am waiting for you in Telegram to receive PRO version
+* [2] -> Buy PRO/VIP version - I am waiting for you in Telegram to receive PRO version
 
 # PRO-DETAILS:
-|-> Stable and fast work unlike the previous version:medium
-|-> Receiving more useful and private information from the client, namely:
-  |-> Credit card details
-  |-> IP
-  |-> Country
-  |-> Region
-  |-> City
-  |-> Internet provider details
-  |-> Information about the mobile device
-|-> All information will be sent to you in the Telegram BOT
-|-> Convenient data interface in Telegram bot for analysis
-|-> PRO-Support 24/7
+* Stable and fast work unlike the previous version:medium
+* Receiving more useful and private information from the client, namely:
+  * Credit card details
+  * IP
+  * Country
+  * Region
+  * City
+  * Internet provider details
+  * Information about the mobile device
+*  All information will be sent to you in the Telegram BOT
+* Convenient data interface in Telegram bot for analysis
+*  PRO-Support 24/7
 
 #  cardesc
     apt update && apt upgrade
