@@ -25,7 +25,7 @@ class B:
             os.system("clear || cls")
 def del_upd():
     try:
-        print("[>] start auto update ")
+        print("[>] Start Auto Update ")
         print(" | Please wait for the new version to install")
         os.system("git checkout . && git pull")
         print(" | Success update and install cardesc \n[>] author @oldnum thank you for being with us :>")
@@ -45,7 +45,7 @@ def upd():
                 os.system('clear || cls')
                 print(logo)
                 print(f'\n[>]New Update Available : {gh_version}')
-                print(' |--> Please install     : https://github.com/oldnum/cardesc')
+                print(' | Detsils     : https://github.com/oldnum/cardesc')
                 del_upd()   
                 exit()
             else:
