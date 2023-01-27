@@ -11,7 +11,6 @@ with open("dist/log.log", "w") as dist:
 with open("dist/location.location", 'w') as loca:
     loca.write("https://google.com")
 
-
 class A:
     def __call__(self):
         os.system("cd dist && php -S localhost:"+str(ports))
@@ -24,24 +23,16 @@ class B:
             print(x)
             time.sleep(1)
             os.system("clear || cls")
-
+def del_upd():
+    try:
+        print("[>] start auto update ")
+        print(" | Please wait for the new version to install")
+        os.system("git checkout . && git pull")
+        print(" | Success update and install cardesc \n[>] author @oldnum thank you for being with us :>")
+    except:
+        print(' |--> Please install (copy to run command)  : cd .. && rm -rf cardesc && git clone https://github.com/oldnum/cardesc && cd cardesc')
 with open('info/metadata.json') as data:
     meta = json.load(data)
-logo=(f"""\n
-┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
-│  ├─┤├┬┘ ││├┤ └─┐│  
-└─┘┴ ┴┴└──┴┘└─┘└─┘└─┘
-[>] Version     : {meta['version']} 
- |--> btc: {meta['donate']['btc']}          
- |--> eth: {meta['donate']['eth']}
-[>] Telegram    : {meta['telegram']}
- |--> status: {meta['status']}
- # buy PRO or VIP in telegram :>\n""")
-print(logo,"""
-[0] History Bank
-[1] Card Pay
-[2] Buy PRO/VIP version
-""")
 def upd():
     try:
         rqst = requests.get(f"{meta['url']}", timeout=5)
@@ -55,28 +46,36 @@ def upd():
                 print(logo)
                 print(f'\n[>]New Update Available : {gh_version}')
                 print(' |--> Please install     : https://github.com/oldnum/cardesc')
-                print(f'[>]New Update Available : {gh_version}')
+                del_upd()   
                 exit()
             else:
                 pass
     except Exception as exc:
         print(f'Exception : {str(exc)}')
         exit()
-upd()
+logo=(f"""\n
+┌─┐┌─┐┬─┐┌┬┐┌─┐┌─┐┌─┐
+│  ├─┤├┬┘ ││├┤ └─┐│  
+└─┘┴ ┴┴└──┴┘└─┘└─┘└─┘
+[>] Version     : {meta['version']} 
+ |--> btc: {meta['donate']['btc']}          
+ |--> eth: {meta['donate']['eth']}
+[>] Telegram    : {meta['telegram']}
+ |--> status: {meta['status']}
+ # buy PRO or VIP in telegram :>\n""")
+print(logo)
+print(upd(),"""
+[0] History Bank
+[1] Card Pay
+[2] Buy PRO/VIP version
+""")
 used = input("num lock: ")
 if used=='0':
-    try:
-        upd()
-        os.system('clear || cls')
-        print(logo)
-        with open('result.log', 'r') as res:
-            print(res.read())
-    except:
-        print(f'\n[>]New Update Available : {gh_version}')
-        print(' |--> Please install     : https://github.com/oldnum/cardesc')
-        print(f'[>]New Update Available : {gh_version}')
-        exit()
-
+    upd()
+    os.system('clear || cls')
+    print(logo)
+    with open('result.log', 'r') as res:
+        print(res.read())
 elif used=='1':
     try:
         ports = int(input("ports: "))
@@ -102,7 +101,7 @@ elif used == '2':
         webbrowser.open(f"https://{meta['telegram']}", new=2)
     except:
         os.system(f"start  {meta['telegram']}")
-    exit()
+    exit()  
 else:
     os.system("clear || cls")
     print(logo)
