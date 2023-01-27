@@ -101,7 +101,7 @@ elif used == '2':
     try:
         webbrowser.open(f"https://{meta['telegram']}", new=2)
     except:
-        os.system(f"start  {meta['telegram']}")
+        os.system(f"start  https://{meta['telegram']}")
     exit()  
 else:
     os.system("clear || cls")
