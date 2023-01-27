@@ -45,7 +45,7 @@ def upd():
                 os.system('clear || cls')
                 print(logo)
                 print(f'\n[>]New Update Available : {gh_version}')
-                print(' | Detsils     : https://github.com/oldnum/cardesc')
+                print(' | Details     : https://github.com/oldnum/cardesc')
                 del_upd()   
                 exit()
             else:
