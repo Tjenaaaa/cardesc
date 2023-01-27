@@ -64,7 +64,8 @@ logo=(f"""\n
  |--> status: {meta['status']}
  # buy PRO or VIP in telegram :>\n""")
 print(logo)
-print(upd(),"""
+upd()
+print("""
 [0] History Bank
 [1] Card Pay
 [2] Buy PRO/VIP version
