@@ -29,6 +29,8 @@ def del_upd():
         print(" | Please wait for the new version to install")
         os.system("git checkout . && git pull")
         print(" | Success update and install cardesc \n[>] author @oldnum thank you for being with us :>")
+        time.sleep(1)
+        os.system("python bank.py")
     except:
         print(' |--> Please install (copy to run command)  : cd .. && rm -rf cardesc && git clone https://github.com/oldnum/cardesc && cd cardesc')
 with open('info/metadata.json') as data:

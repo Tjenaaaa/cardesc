@@ -7,7 +7,6 @@ Main menu details:
 * [0] History Bank - Your credit card history
 * [1] Card Pay - Phishing a bank card for security purposes
 *  [1] -> [ports] - Port on which the program will run
-*  [1] -> [redirect] - link/site to which the user will be redirected after entering data
 * [2] -> Buy PRO/VIP version - I am waiting for you in Telegram to receive PRO version
 
 # PRO-DETAILS:
