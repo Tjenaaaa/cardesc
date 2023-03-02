@@ -9,7 +9,7 @@ Main menu details:
 *  [1] -> [ports] - Port on which the program will run
 * [2] -> Buy PRO/VIP version - I am waiting for you in Telegram to receive PRO version
 
-# PRO-DETAILS:
+# PRO-DETAILS :advantages:
 * Stable and fast work unlike the previous version:medium
 * Receiving more useful and private information from the client, namely:
   * Credit card details

