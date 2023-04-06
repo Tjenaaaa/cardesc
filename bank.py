@@ -68,7 +68,7 @@ upd()
 print("""
 [0] History Bank
 [1] Card Pay
-[2] Buy PRO/VIP version
+[2] Other tools and Buy PRO/VIP version
 """)
 used = input("num lock: ")
 if used=='0':
@@ -96,7 +96,7 @@ elif used == '2':
     upd()
     os.system('clear || cls')
     print(logo)
-    print("I am waiting for you in Telegram to receive PRO version\n |-> @oldnum")
+    print("I am waiting for you in Telegram to get my other programs or the PRO version\n |-> @oldnum")
     time.sleep(1)
     try:
         webbrowser.open(f"https://{meta['telegram']}", new=2)
