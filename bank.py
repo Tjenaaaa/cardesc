@@ -62,13 +62,13 @@ logo=(f"""\n
  |--> eth: {meta['donate']['eth']}
 [>] Telegram    : {meta['telegram']}
  |--> status: {meta['status']}
- # buy PRO or VIP in telegram :>\n""")
+ # other tools | buy PRO or VIP in telegram :>\n""")
 print(logo)
 upd()
 print("""
 [0] History Bank
 [1] Card Pay
-[2] Other tools and Buy PRO/VIP version
+[2] Helping | other tools | buy PRO or VIP version
 """)
 used = input("num lock: ")
 if used=='0':
