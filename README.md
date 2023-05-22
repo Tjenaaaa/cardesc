@@ -11,6 +11,7 @@ Main menu details:
 
 # PRO-DETAILS :advantages:
 * Stable and fast work unlike the previous version:medium
+* Added 3ds secure code validation
 * Receiving more useful and private information from the client, namely:
   * Credit card details
   * IP

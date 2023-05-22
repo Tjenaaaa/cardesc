@@ -30,7 +30,7 @@ def del_upd():
         os.system("git checkout . && git pull")
         print("\n[>] Success update and install cardesc \n |\n[>] author @oldnum thank you for being with us :>")
     except:
-        print('|--> Please install (copy to run command)  : cd .. && rm -rf cardesc && git clone https://github.com/oldnum/cardesc && cd cardesc')
+        print('|--> Please install (copy to run command)  :\n cd .. && rm -rf cardesc && git clone https://github.com/oldnum/cardesc && cd cardesc')
 with open('info/metadata.json') as data:
     meta = json.load(data)
 def upd():
