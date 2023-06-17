@@ -1,13 +1,13 @@
 ## About
 Cardesc - universal phishing of bank cards to obtain personal/private data
 
-![logo](https://i.imgur.com/fRTtT6c.png)
+![logo](https://i.imgur.com/WkNMl5K.png)
 
 Main menu details:
 * [0] History Bank - Your credit card history
 * [1] Card Pay - Phishing a bank card for security purposes
 *  [1] -> [ports] - Port on which the program will run
-* [2] Helping | Other programs | Buy PRO version - Waiting for you in Telegram for questions | other programs | PRO version purchases
+* [2] Helping | PRO version  - Waiting for you in Telegram for questions | other programs | PRO version purchases
 
 # PRO-DETAILS :advantages:
 * Stable and fast work unlike the previous version:medium
